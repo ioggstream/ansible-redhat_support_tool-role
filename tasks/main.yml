@@ -1,0 +1,16 @@
+---
+# tasks file for redhat_support_tool
+- name: Install redhat-support-tools
+  yum: name=redhat-support-tool
+  ignore_errors: true
+
+- name: Create local directory
+  file: 
+    dest: "{{ '~/.redhat-support-tool/' | expanduser }}"
+    state: directory
+
+- name: Put the template there
+  template:
+    src: redhat-support-tool.conf.j2
+    dest: "{{ rst_file }}"
+

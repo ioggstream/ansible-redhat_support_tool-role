@@ -1,0 +1,5 @@
+---
+# vars file for redhat_support_tool
+rst_dir: "{{ '~/.redhat-support-tool/' | expanduser }}"
+rst_file: "{{ rst_dir }}/redhat-support-tool.conf"
+

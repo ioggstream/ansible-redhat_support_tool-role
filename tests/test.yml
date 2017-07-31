@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - { role: redhat_support_tool, user: foo, password: bar }
